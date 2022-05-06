@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!--Dependent Class --> 
+	<bean  id="crikEqp" class="com.adn.DepInj.SetterInj.CricketEquipments"></bean>
+	
+	
+	<!--Target Class --> 
+	<bean  id="myCoach" class="com.adn.DepInj.SetterInj.CricketCoach">
+	<property  name="crikEquips" ref="crikEqp"/>
+	<property  name="team"  value="Kolkata Night Riders"/>
+	<property  name="emailAddress"  value="kkr@gmail.com"/>
+	 </bean>
+	
+</beans>
